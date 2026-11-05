@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>دليل الجامعة</title>
+  <meta name="description" content="دليل الطلبة والزوار إلى المباني والقاعات والمختبرات ومكاتب المحاضرين والموظفين.">
+  <meta name="theme-color" content="#0f5c4d" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c1714" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="دليل الجامعة">
+  <link rel="stylesheet" href="vendor/fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="bar">
+      <h1 id="brand">دليل الجامعة</h1>
+      <button id="install" class="icon-btn" data-act="install" hidden aria-label="ثبّت التطبيق على الشاشة الرئيسية">⬇️ تثبيت</button>
+      <button id="gps" class="icon-btn" data-act="gps" aria-label="حدد موقعي">📍</button>
+    </div>
+    <form id="search" class="search" role="search" autocomplete="off">
+      <input id="q" type="search" enterkeyhint="search" placeholder="اسم محاضر، مبنى، رقم غرفة…" aria-label="ابحث في دليل الجامعة">
+      <button type="submit" aria-label="بحث">بحث</button>
+      <ul id="suggest" class="suggest" hidden></ul>
+    </form>
+  </header>
+
+  <main id="view" aria-live="polite"></main>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <nav class="tabs" aria-label="الأقسام">
+    <a href="#home"><span aria-hidden="true">🔎</span>بحث</a>
+    <a href="#buildings"><span aria-hidden="true">🏛️</span>المباني</a>
+    <a href="#map"><span aria-hidden="true">🗺️</span>الخريطة</a>
+  </nav>
+  <p id="version" class="version"></p>
+
+  <script src="app.js"></script>
+</body>
+</html>
